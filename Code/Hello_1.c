@@ -37,5 +37,32 @@ int main(int argc, char *argv[])
         printf("Too few arguments. . .\n");
         printf("Try using: %s <arg_1> <arg_2> ... <arg_n>\n", filename);
     }
+
+    for (int i = 1; i < argc; i++){
+        //printf("\n\n--------For loop debug: i: %d--------\n\n", i);
+        char *current_arg = argv[i];
+
+        if (strcmp(current_arg, "-v") == 0 || strcmp(current_arg, "--version") == 0){
+            printf("%s, version 1.0, LesssGooo\n", filename);
+        }
+
+        //printf("\n\n--------debug: hi--------\n\n");
+
+        if (strcmp(current_arg, "-h") == 0 || strcmp(current_arg, "--help") == 0){
+            printf("Usage: %s <arg_1> <arg_2> ... <arg_n>\n", filename);
+            printf("Options for arguments:\n");
+            
+            {
+                printf("\t-v, --version\t\tPrints the version of the program\n");
+                printf("\t-h, --help\t\tPrints this help message\n");
+                printf("\t<anything_else>\t\tPrints the argument and its index and the number of characters in it.\n");
+            }
+        }
+        
+        else{
+            printf("Argument: %s,\tChars: %zu, Index: %d\n", current_arg, strlen(current_arg), i);
+        }
+    }
+    printf("------------Program Finished-------------\n");
     return 0;
 }
