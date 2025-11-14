@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 {
     // Start of the program
     printf("Hello World\n");
-    printf("-----------------------------------------\n\n");
+    printf("-----------------------------------------\n\n\n");
 
 
 
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
     if (argc < 2){
         printf("Too few arguments. . .\n");
         printf("Try using: %s <arg_1> <arg_2> ... <arg_n>\n", filename);
-        printf("\n-----------------------------------------\n\n");
+        printf("\no-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o\n\n");
     }
 
 
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 
 
         // If the current argument is -h or --help
-        if (strcmp(current_arg, "-h") == 0 || strcmp(current_arg, "--help") == 0){
+        else if (strcmp(current_arg, "-h") == 0 || strcmp(current_arg, "--help") == 0){
             printf("Usage: %s <arg_1> <arg_2> ... <arg_n>\n", filename);
             printf("Options for arguments:\n");
             
@@ -81,12 +81,12 @@ int main(int argc, char *argv[])
             printf("Argument: %s,\tChars: %zu, Index: %d\n", current_arg, strlen(current_arg), i);
         }
 
-        printf("\n-----------------------------------------\n\n");
+        printf("\no-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o\n\n");
     }
     
     
     
     // End of the program
-    printf("------------Program Finished-------------\n");
+    printf("\n------------Program Finished-------------\n");
     return 0;
 }
